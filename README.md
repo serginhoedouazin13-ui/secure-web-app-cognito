@@ -37,7 +37,7 @@ Features
 - Snippets and pointers for verifying Cognito-issued JWTs.
 - Recommendations for IaC and CI.
 
-Architecture (high-level)
+Architecture 
 -------------------------
 - Frontend (SPA) authenticates users against a Cognito User Pool (OIDC/OpenID Connect).
 - After sign-in, the frontend obtains id/access tokens and optionally exchanges them with an Identity Pool for temporary AWS credentials.
