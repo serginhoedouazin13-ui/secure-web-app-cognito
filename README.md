@@ -1,6 +1,6 @@
 # Secure Web Application with Amazon Cognito 
 
-(https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/workflows/Python%20Tests/badge.svg)](https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/actions)
+[![Tests](https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/workflows/Python%20Tests/badge.svg)](https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/actions)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![AWS](https://img.shields.io/badge/AWS-Cognito-orange.svg)](https://aws.amazon.com/cognito/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
