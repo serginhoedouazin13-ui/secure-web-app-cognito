@@ -1,4 +1,4 @@
-# Secure Web Application with Amazon Cognito 🔐
+# Secure Web Application with Amazon Cognito 
 
 [![Tests](https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/workflows/Python%20Tests/badge.svg)](https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/actions)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
@@ -7,20 +7,20 @@
 
 Production-ready secure web application using Amazon Cognito for user authentication and authorization. Features complete user pool setup, identity pool configuration, and secure DynamoDB access with fine-grained permissions.
 
-## ✨ Features
+##  Features
 
-- 🔐 **Complete Authentication**: Sign up, sign in, password reset, email verification
-- 👥 **User Pool Management**: AWS Cognito User Pool with custom attributes
-- 🎫 **Identity Federation**: Identity Pool for AWS resource access
-- 🗄️ **DynamoDB Integration**: Secure database access with IAM roles
-- 🔑 **Token Management**: JWT token validation and refresh
-- 🛡️ **Authorization**: Role-based access control (RBAC)
-- 📧 **Email Verification**: SES integration for user verification
-- 🔄 **Password Policies**: Configurable password strength requirements
-- 📱 **MFA Support**: Multi-factor authentication with TOTP
-- 🌐 **OAuth 2.0**: Social login (Google, Facebook, Amazon)
+-  **Complete Authentication**: Sign up, sign in, password reset, email verification
+-  **User Pool Management**: AWS Cognito User Pool with custom attributes
+-  **Identity Federation**: Identity Pool for AWS resource access
+-  **DynamoDB Integration**: Secure database access with IAM roles
+-  **Token Management**: JWT token validation and refresh
+-  **Authorization**: Role-based access control (RBAC)
+-  **Email Verification**: SES integration for user verification
+-  **Password Policies**: Configurable password strength requirements
+-  **MFA Support**: Multi-factor authentication with TOTP
+-  **OAuth 2.0**: Social login (Google, Facebook, Amazon)
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
@@ -36,34 +36,6 @@ Production-ready secure web application using Amazon Cognito for user authentica
 - [Contributing](#contributing)
 - [License](#license)
 
-## 🏗️ Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        Client Application                    │
-│                   (Web Browser / Mobile App)                 │
-└───────────────────────────┬─────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│                     Amazon Cognito                           │
-│  ┌──────────────────┐         ┌──────────────────┐         │
-│  │   User Pool      │         │  Identity Pool   │         │
-│  │                  │         │                  │         │
-│  │  • Sign Up/In    │────────▶│  • AWS Creds    │         │
-│  │  • User Mgmt     │         │  • IAM Roles    │         │
-│  │  • JWT Tokens    │         │  • Temp Access  │         │
-│  └──────────────────┘         └──────────────────┘         │
-└───────────────────────────────────┬───────────────────────────┘
-                                    │
-                    ┌───────────────┼───────────────┐
-                    ▼               ▼               ▼
-            ┌──────────────┐ ┌──────────┐  ┌──────────────┐
-            │   DynamoDB   │ │    S3    │  │  API Gateway │
-            │              │ │          │  │              │
-            │  User Data   │ │  Files   │  │  REST APIs   │
-            └──────────────┘ └──────────┘  └──────────────┘
-```
 
 ### Authentication Flow
 
@@ -82,7 +54,7 @@ Production-ready secure web application using Amazon Cognito for user authentica
    - Temporary AWS credentials issued
    - Access DynamoDB, S3, etc. with IAM role
 
-## 🔧 Prerequisites
+##  Prerequisites
 
 - **AWS Account**: Active AWS account with appropriate permissions
 - **Python**: 3.9 or higher
@@ -90,7 +62,7 @@ Production-ready secure web application using Amazon Cognito for user authentica
 - **Node.js**: 14+ (for frontend, if applicable)
 - **Git**: For cloning the repository
 
-## ☁️ AWS Setup
+##  AWS Setup
 
 ### 1. Create Cognito User Pool
 
@@ -364,7 +336,7 @@ class Settings(BaseSettings):
 settings = Settings()
 ```
 
-## 🚀 Usage
+##  Usage
 
 ### Starting the Application
 
@@ -527,7 +499,7 @@ def access_dynamodb(id_token):
     return response.get('Item')
 ```
 
-## 📚 API Documentation
+##  API Documentation
 
 ### Authentication Endpoints
 
@@ -749,7 +721,7 @@ Authorization: Bearer <access_token>
 }
 ```
 
-## 🧪 Testing
+##  Testing
 
 ### Test Structure
 
@@ -899,7 +871,7 @@ jobs:
         mypy app/
 ```
 
-## 🐳 Deployment
+##  Deployment
 
 ### Docker Deployment
 
@@ -1047,7 +1019,7 @@ resources:
 serverless deploy --stage production
 ```
 
-## 🛡️ Security Best Practices
+##  Security Best Practices
 
 ### 1. Password Policies
 
@@ -1229,7 +1201,7 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
 app.add_middleware(SecurityHeadersMiddleware)
 ```
 
-## 🔍 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -1343,14 +1315,14 @@ client = boto3.client(
 )
 ```
 
-## 📖 Additional Resources
+##  Additional Resources
 
 - [AWS Cognito Documentation](https://docs.aws.amazon.com/cognito/)
 - [Boto3 Cognito Documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cognito-idp.html)
 - [JWT Token Validation](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-verifying-a-jwt.html)
 - [Cognito Security Best Practices](https://docs.aws.amazon.com/cognito/latest/developerguide/managing-security.html)
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
@@ -1379,17 +1351,17 @@ pytest
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - AWS Cognito team for excellent authentication services
 - FastAPI community for the amazing framework
 - Contributors and maintainers
 
-## 📞 Support
+##  Support
 
-- 📖 [Documentation](docs/)
-- 🐛 [Report Issues](https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/issues)
-- 💬 [Discussions](https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/discussions)
+-  [Documentation](docs/)
+-  [Report Issues](https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/issues)
+-  [Discussions](https://github.com/serginhoedouazin13-ui/secure-web-app-cognito/discussions)
 
 ---
 
